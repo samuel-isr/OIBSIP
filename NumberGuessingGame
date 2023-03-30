@@ -1,0 +1,30 @@
+import java.util.Scanner;
+
+public class NumberGuessingGame {
+
+	public static void main(String[] args) {
+		
+		Scanner in=new Scanner(System.in);
+		int n,guess;
+		n=1+(int)(100*Math.random());
+		
+		System.out.println("Enter your guess between 1 to 100 : ");
+		
+		do {
+			guess=in.nextInt();
+			if(n>guess)
+			{
+				System.out.println("Incorrect! Hint : the number is higher");
+			}
+			else if(n<guess)
+			{
+				System.out.println("Incorrect! Hint : the number is lower");
+			}
+		}
+		
+		while(n!=guess);
+			System.out.println("The entered number is the correct guess! ");
+
+	}
+
+}
